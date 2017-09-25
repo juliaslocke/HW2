@@ -83,7 +83,10 @@ def song_results():
 			elif count < num:
 				songs_d[count] = song['trackName']
 				count += 1
-		return render_template("HW2results.html", result=songs_d)
+		if songs_d == {}:
+			return "I'm sorry, there are no songs to show for this artist"
+		else:
+			return render_template("HW2results.html", result=songs_d)
 
 
 
