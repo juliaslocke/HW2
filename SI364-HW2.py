@@ -86,7 +86,7 @@ def song_results():
 		if songs_d == {}:
 			return "I'm sorry, there are no songs to show for this artist"
 		else:
-			return render_template("HW2results.html", result=songs_d)
+			return render_template("HW2results.html", result=songs_d, num=num)
 
 
 
